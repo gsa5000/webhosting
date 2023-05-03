@@ -7,21 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>자기소개 사이트</h1> 
-        <h1><a href="#n1">1.</a>자기 소개<br></h1>
-        <h1><a href="#n2">2.</a>소속<br></h1>
-        <h1><a href="#n3">3.</a>여담<br></h1>
-    <hr>
-    <a href="#"><h3 id="n1">자기소개</h3></a>
-    경북산업직업전문학교 학생 안교석입니다.<br>
-    대체 이미지입니다.
-    <img src="https://picsum.photos/id/1020/600/400" alt="">
-    <br>
-    <a href="#"><h3 id="n2">소속</h3></a>
-    경북산업직업전문학교 소속입니다. 이미지를 누르면 사이트로 이동합니다.
-    <br>
-    <a href="https://kb.step.or.kr/main.do"><img src="https://kb.step.or.kr/upload/refSite/20230106013934220.png" width="400" length="300"></a>    
-    <a href="#"><h3 id="n3">여담</h3></a>
-    <h6>솔직히 말할때마다 학교 이름을 자꾸 틀려요. 너무 복잡해요</h6>
+    <h1>dasd</h1>
+    <div id="result"></div>
+    <h1>dsfsd</h1>
+    <script>
+        let ajax=new XMLHttpRequest()
+        ajax.onreadystatechange=function(){
+            if(this.readyState==4 && this.status==200)
+            {
+                let h1 = document.querySelector('#result')
+                h1.textContent=JSON.parse(ajax.responseText)['price']
+            }
+        }
+        ajax.open('GET','https://gsa5000.github.io/webhosting/')
+        ajax.send()
+    </script>
 </body>
 </html>
